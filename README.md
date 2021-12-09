@@ -1,2 +1,2 @@
-# Project_System_Farmacia
+# Project_Farmacia_System
 Simple Management System Project for a Drugstore
