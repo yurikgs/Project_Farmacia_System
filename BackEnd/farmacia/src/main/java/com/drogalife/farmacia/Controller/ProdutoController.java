@@ -29,6 +29,14 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository repository;
 	
+	public ProdutoRepository getRepository() {
+		return repository;
+	}
+
+	public void setRepository(ProdutoRepository repository) {
+		this.repository = repository;
+	}
+
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll() {
 		return ResponseEntity.ok(repository.findAll());

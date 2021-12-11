@@ -28,6 +28,14 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository repository;
 	
+	public CategoriaRepository getRepository() {
+		return repository;
+	}
+
+	public void setRepository(CategoriaRepository repository) {
+		this.repository = repository;
+	}
+
 	@GetMapping
 	public ResponseEntity<List<Categoria>> getAll(){	
 		return ResponseEntity.ok(repository.findAll());
@@ -44,8 +52,6 @@ public class CategoriaController {
 		return ResponseEntity.ok(repository.findAllByNomeCategoriaContainingIgnoreCase(nome));
 	}
 	
-	
-	///////////////////////////////////////////////////////////////<----- Estudar aqui
 	
 	@PostMapping
 	public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria categoria) {
